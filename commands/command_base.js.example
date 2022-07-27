@@ -1,0 +1,13 @@
+// This is just the model that must be followed to create commands
+
+module.exports= {
+    name: 'command call name',
+    description: 'command description',
+    
+    execute(insert here the parameters to be imported from the main index){
+       // Command execution area
+   
+   
+   
+    }
+}
