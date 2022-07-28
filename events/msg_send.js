@@ -6,7 +6,7 @@ module.exports = {
   description:
     'This command will be executed every time someone sends a message',
   execute(client, message) {
-
+console.log(message.author.username)
 
   },
 };

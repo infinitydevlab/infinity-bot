@@ -32,14 +32,13 @@ client.commands.set(command.name,command )
 
 client.on('ready', () => {
   client.commands.get('initial').execute(client);
-  console.log(`${process.env.BOT_NAME} online`);
+  console.log(`[✓] ${process.env.BOT_NAME} está online`);
 });
 
 
 
 client.on('messageCreate', async message => {
   client.commands.get('msg_send').execute(client, message);
-  console.log("Mensagem enviada")
 });
 
 
@@ -53,7 +52,12 @@ client.on('messageCreate', async message => {
   client.commands.get('say').execute(message,args)
  }
 
+ if(cmd === '.sugerir'){
+  client.commands.get('sugerir').execute(client,message,args)
+ }
 
 });
-client.login(process.env.BOT_TOKEN);
-console.log(`Acordando ${process.env.BOT_NAME}...\n ----------------`);
+client.login(process.env.BOT_TOKEN).then(()=>{
+  console.log(`[✓] ${process.env.BOT_NAME} authenticado com sucesso!`)
+});
+console.log(`[◌] Iniciando ${process.env.BOT_NAME}...\n ----------------`);

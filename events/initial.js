@@ -8,6 +8,6 @@ module.exports = {
     'this command runs automatically when starting the bot, can be used to configure status and other things.',
 
   execute(client) {
-    client.user.setActivity(`🤖 I'm just a robot capybara`);
+    client.user.setActivity(`🏗️ em desenvolvimento...`);
   },
 };
