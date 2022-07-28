@@ -4,9 +4,8 @@ const version = require('../package.json').version;
 module.exports = {
   name: 'msg_send',
   description:
-    'This command will be executed every time someone sends a message',
+    'Esse evento sera executado toda vez que uma mensagem for enviada',
   execute(client, message) {
-console.log(message.author.username)
 
   },
 };

@@ -41,6 +41,9 @@ client.on('messageCreate', async message => {
   client.commands.get('msg_send').execute(client, message);
 });
 
+client.on('messageCreate', async message => {
+  client.commands.get('replyAjuda').execute(client, message);
+});
 
 
 client.on('messageCreate', async message => {
