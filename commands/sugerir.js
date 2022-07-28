@@ -9,10 +9,10 @@ module.exports= {
       .setAuthor(`${message.author.tag} sugeriu:`,message.author.displayAvatarURL({format: "png"}))
       .setDescription(args.join(' '))
       .setColor(`BLUE`)
-    message.channel.send({embeds: [embed]}).then(msg => {
+      client.channels.cache.get("1001854812037595186").send({embeds: [embed]}).then(msg => {
       msg.react("⬆️");
       msg.react("⬇️");
   });
-     // client.channels.cache.get("1001854812037595186").send(embed)
+
     }
 }
