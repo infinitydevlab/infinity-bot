@@ -1,6 +1,6 @@
 module.exports = {
   name: 'say',
-  description: 'Testando',
+  description: 'Envia uma mensagem pelo bot contendo os argumentos do comando',
   execute(message, args) {
     message.delete();
     if (!args.join(' '))
