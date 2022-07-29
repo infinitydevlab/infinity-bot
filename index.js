@@ -9,7 +9,13 @@ const fs = require('fs');
 const discord = require('discord.js');
 const { Client, Intents, DiscordAPIError } = require('discord.js');
 const client = new Client({
-  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_PRESENCES],
+  intents: [
+	Intents.FLAGS.GUILDS, 
+	Intents.FLAGS.GUILD_MESSAGES, 
+	Intents.FLAGS.GUILD_MEMBERS, 
+	Intents.FLAGS.GUILD_PRESENCES,
+	Intents.FLAGS.GUILD_MESSAGE_REACTIONS
+	]
 });
 
 
@@ -59,7 +65,16 @@ client.on('messageCreate', async message => {
   client.commands.get('sugerir').execute(client,message,args)
  }
 
+ if(cmd === '.hello'){
+	client.commands.get('hello').execute(message)
+ }
+
+ if(cmd === ".apresentar"){
+	client.commands.get("apresentar").execute(message)
+ }
+
 });
+
 client.login(process.env.BOT_TOKEN).then(()=>{
   console.log(`[✓] ${process.env.BOT_NAME} authenticado com sucesso!`)
 });
